@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17251f">
+  <title>The Mystery of the Three Magical Kitchens</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" id="brand-home" aria-label="Return to home">
+      <span class="brand-icon" aria-hidden="true">✦</span>
+      <span>THE THREE MAGICAL KITCHENS</span>
+    </a>
+    <span class="course-tag">CULINARY QUEST · KNIFE SKILLS</span>
+  </header>
+
+  <main class="shell">
+    <section id="home-screen" class="screen hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A CULINARY LEARNING ADVENTURE</p>
+        <h1>The Mystery of the<br><em>Three Magical Kitchens</em></h1>
+        <p class="lead">The royal dinner is in danger! Travel through three kitchens, identify vegetable cuts, and uncover the secret that connects technique, flavour and tradition.</p>
+        <div class="outcome">
+          <span class="outcome-icon" aria-hidden="true">🎯</span>
+          <div><strong>Your mission</strong><p>Recognise French classical cuts, understand Italian preparation styles, and identify Malay vegetable-preparation methods and their purposes.</p></div>
+        </div>
+        <button id="play-button" class="button primary large">Enter the kitchens <span aria-hidden="true">→</span></button>
+        <p class="microcopy">12 challenges · Untimed by default · Play on computer or phone</p>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a chef, vegetables and three kitchen doors">
+        <div class="sunburst"></div>
+        <div class="chef-emoji" aria-hidden="true">👨‍🍳</div>
+        <div class="floating veg veg-carrot" aria-hidden="true">🥕</div>
+        <div class="floating veg veg-onion" aria-hidden="true">🧅</div>
+        <div class="floating veg veg-leaf" aria-hidden="true">🥬</div>
+        <div class="door-row">
+          <div class="door france"><span>🇫🇷</span><b>FRANCE</b><small>Precision</small></div>
+          <div class="door italy"><span>🇮🇹</span><b>ITALY</b><small>Purpose</small></div>
+          <div class="door malay"><span>🇲🇾</span><b>MALAY</b><small>Heritage</small></div>
+        </div>
+        <div class="art-caption">Three traditions. One curious apprentice.</div>
+      </div>
+    </section>
+
+    <section id="instructions-screen" class="screen panel hidden">
+      <p class="eyebrow">BEFORE YOU BEGIN</p>
+      <h2>How to play</h2>
+      <div class="instruction-grid">
+        <article><span class="instruction-number">01</span><h3>Read the clue</h3><p>Each room gives you a culinary question and four possible answers.</p></article>
+        <article><span class="instruction-number">02</span><h3>Choose carefully</h3><p>Select an answer with a tap, click, or keyboard number key (1–4).</p></article>
+        <article><span class="instruction-number">03</span><h3>Learn from feedback</h3><p>Read the explanation. If you are incorrect, try again before moving on.</p></article>
+        <article><span class="instruction-number">04</span><h3>Unlock the feast</h3><p>Complete all 12 questions. Your learning score is based on first-attempt answers, not speed.</p></article>
+      </div>
+      <div class="rules-note"><span aria-hidden="true">⏳</span> <div><strong>No rush.</strong><p>The game is untimed. Focus on understanding the cuts and why they are used.</p></div></div>
+      <div class="button-row"><button id="back-home" class="button secondary">← Home</button><button id="start-game" class="button primary">Start the quest →</button></div>
+    </section>
+
+    <section id="game-screen" class="screen hidden">
+      <div class="game-head">
+        <div><p class="eyebrow" id="room-kicker">ROOM 1 OF 3</p><h2 id="room-title">The French Kitchen</h2></div>
+        <button id="home-during-game" class="button ghost small">⌂ Home</button>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-meta"><span id="progress-label">Challenge 1 of 12</span><span id="score-label">First-try score: 0</span></div>
+        <div class="progress-track" role="progressbar" aria-label="Quest progress" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" id="progress-bar"><div id="progress-fill"></div></div>
+      </div>
+      <div class="game-layout">
+        <aside class="room-card" id="room-card">
+          <div class="room-illustration" id="room-illustration" aria-hidden="true">🥕</div>
+          <p class="room-label">YOUR LOCATION</p><h3 id="room-card-title">French Kitchen</h3>
+          <p id="room-description">Precision is the secret ingredient.</p>
+          <div class="room-status"><span class="status-dot"></span><span id="room-status-text">Door locked</span></div>
+        </aside>
+        <section class="question-card" aria-live="polite">
+          <div class="question-top"><span id="question-category" class="category-pill">FRENCH CUTS</span><span class="question-number" id="question-number">01 / 12</span></div>
+          <h3 id="question-text">Question appears here</h3>
+          <p id="question-context" class="question-context"></p>
+          <div id="answer-options" class="answer-options"></div>
+          <div id="feedback" class="feedback hidden" role="status">
+            <div class="feedback-heading"><span id="feedback-icon">✦</span><strong id="feedback-title">Good try!</strong></div>
+            <p id="feedback-text"></p>
+            <button id="continue-button" class="button primary">Continue →</button>
+          </div>
+          <p class="keyboard-hint">Keyboard: press 1, 2, 3 or 4 to choose an answer.</p>
+        </section>
+      </div>
+    </section>
+
+    <section id="results-screen" class="screen panel hidden">
+      <div class="result-icon" aria-hidden="true">👑</div>
+      <p class="eyebrow">QUEST COMPLETE</p>
+      <h2 id="result-heading">The royal dinner is saved!</h2>
+      <p class="result-lead" id="result-lead">You explored three culinary traditions.</p>
+      <div class="results-grid">
+        <div class="result-stat"><span id="final-first-try">0/12</span><small>Correct on first try</small></div>
+        <div class="result-stat"><span id="final-completed">12/12</span><small>Challenges completed</small></div>
+        <div class="result-stat"><span id="final-accuracy">0%</span><small>First-try accuracy</small></div>
+      </div>
+      <div class="takeaway"><strong>THE BIG IDEA</strong><p>Every good cut has a purpose, and every kitchen has a story.</p></div>
+      <h3 class="review-title">Your learning review</h3>
+      <div id="review-list" class="review-list"></div>
+      <div class="button-row"><button id="play-again" class="button primary">Play again ↻</button><button id="return-home" class="button secondary">Return home</button></div>
+    </section>
+    <footer><span>THE THREE MAGICAL KITCHENS</span><span>Learn the cut. Understand the purpose. Respect the tradition.</span></footer>
+  </main>
+</body>
+</html>
